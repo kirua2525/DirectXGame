@@ -19,6 +19,8 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 	// ImGuiManagerインスタンスの取得
 	ImGuiManager* imguiManager = ImGuiManager::GetInstance();
 
+	//ゲームシーンのインスタンス生成
+	gameScene = new GameScene();
 
 	// ゲームシーンの初期化
 	gameScene->Initialize();

@@ -1,4 +1,5 @@
 #include <KamataEngine.h>
+#include "Player.h"
 #include <vector>
 #include "Skydome.h"
 
@@ -22,10 +23,17 @@ private:
 
 	KamataEngine::WorldTransform worldTransform_;
 
+	//テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+
+	//自キャラ
+	Player* player_ = nullptr;
+
 	//スカイドーム
 	Skydome* skydome_ = nullptr;
 
 	//3Dモデル
+	KamataEngine::Model* model_ = nullptr;
 	KamataEngine::Model* modelSkydome_ = nullptr;
 
 	// カメラ

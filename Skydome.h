@@ -23,6 +23,8 @@ public:
 
 private:
 
+	std::vector<std::vector<KamataEngine::WorldTransform*>> worldTransformBlocks_;
+
 	//ワールド変換データ
 	KamataEngine::WorldTransform worldTransform_;
 
