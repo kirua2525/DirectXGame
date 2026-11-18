@@ -6,7 +6,7 @@
 
 using namespace KamataEngine;
 
-void Player::Initialaize(KamataEngine::Model* model, KamataEngine::Camera* camera, const Vector3& position) {
+void Player::Initialize(KamataEngine::Model* model, KamataEngine::Camera* camera, const Vector3& position) {
 
 	//NULLポインタチェック
 	assert(model);
@@ -24,6 +24,8 @@ void Player::Initialaize(KamataEngine::Model* model, KamataEngine::Camera* camer
 	camera_ = camera;
 
 }
+
+
 
 void Player::Update() {
 

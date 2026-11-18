@@ -23,12 +23,13 @@ void GameScene::Initialize() {
 
 
 	//プレイヤー座標
-	Vector3 playerPosition = (100, 100, 100);
+	Vector3 playerPosition = {100, 100, 100};
 
 	//自キャラの初期化
-	player_->Initialaize(model_, &camera_, playerPosition);
+	player_->Initialize(model_, &camera_, playerPosition);
 
-
+	//デバッグカメラの生成
+	debugCamera_ = new DebugCamera(1280, 720);
 
 
 
@@ -67,14 +68,13 @@ void GameScene::Update() {
 }
 
 void GameScene::Draw() {
-
-	//自キャラの描画
+	Model::PreDraw();
+	
+	// 自キャラの描画
 	player_->Draw();
 
-	//天球の描画
+	// 天球の描画
 	skydome_->Draw();
-
-	Model::PreDraw();
 
 	Model::PostDraw();
 

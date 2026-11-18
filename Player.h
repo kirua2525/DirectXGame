@@ -10,7 +10,7 @@ class Player {
 public:
 
 	//初期化
-	void Initialaize(KamataEngine::Model* model, KamataEngine::Camera* camera, const KamataEngine::Vector3& position);
+	void Initialize(KamataEngine::Model* model, KamataEngine::Camera* camera, const KamataEngine::Vector3& position);
 
 	//更新
 	void Update();
@@ -28,7 +28,7 @@ public:
 	// ワールド座標を取得
 	KamataEngine::Vector3 GetWorldPosition();
 
-
+	const KamataEngine::Vector3& GetVelocity() const { return velocity_; }
 
 
 private:

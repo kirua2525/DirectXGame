@@ -19,9 +19,21 @@ public:
 
 	~GameScene();
 
+public:
+
+	bool IsFinished() const { return finished_; }
+
+	bool IsClear() const { return cleared_; }
+
 private:
 
 	KamataEngine::WorldTransform worldTransform_;
+
+	//終了フラグ
+	bool finished_ = false;
+
+	//クリアフラグ
+	bool cleared_ = false;
 
 	//テクスチャハンドル
 	uint32_t textureHandle_ = 0;
